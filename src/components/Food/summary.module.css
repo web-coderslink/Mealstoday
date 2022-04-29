@@ -1,0 +1,38 @@
+
+.summary{
+    background:linear-gradient(rgb(254, 192, 110) , rgb(255, 255, 139) , rgb(193, 217, 13)) ;
+    background-image:url('https://amritsruae.com/blog/wp-content/uploads/2021/08/top-indian-food-in-dubai.jpeg')  ;
+}
+
+.summary .dec{
+    width:10rem;
+    height:10rem;
+    background-color: rgba(0, 0, 0, 0.192);
+    border-radius: 50%;
+    right:0%;
+    top:0%;
+    position: absolute;
+}
+
+.summary h2{
+    color:rgb(85, 76, 0);
+    font-weight:400;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.summary p{
+    width:40rem;
+    height:20rem;
+    background-color: rgba(127, 64, 2, 0.399);
+   
+    border-radius: 50%;
+   left:25%;
+   color:white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-indent: 20%;
+   text-align:center;
+    position:relative;
+}

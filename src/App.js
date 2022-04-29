@@ -1,24 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/layout/Header';
+import {useReducer} from 'react'
+import Meals from './components/Food/food';
+import Cart from './components/Cart/cart';
+import CartProvider from './store/cartProvider';
+
+const collection ={
+   cartshow:false
+}
+
+const reducer =(state,action)=>{
+ console.log(state);
+  switch (action.type){
+  
+    case 'show': return {...state,cartshow:true};
+    case 'hide':return {...state,cartshow:false};
+    default:
+      return state;
+  }
+
+}
 
 function App() {
+ 
+  const [state,dispatch]=useReducer(reducer,collection);
+  const showcartitemHandler=()=>{
+    dispatch({type:'show'})
+  }
+
+  const hidecartitemHandler=()=>{
+    dispatch({type:'hide'})
+  }
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <CartProvider>
+     {state.cartshow && <Cart onCloseCart={hidecartitemHandler} />}
+     <Header onShowCart={showcartitemHandler}/>
+     <main>
+       <Meals />
+     </main>
+   </CartProvider>
   );
 }
 

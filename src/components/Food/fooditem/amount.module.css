@@ -1,0 +1,23 @@
+.Form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Form label{
+    margin-inline: 5px;
+}
+
+.Form input{
+    margin-inline: 2px;
+    border:none;
+    padding:2px;
+    border-radius:5px;
+}
+
+.Form button{
+    border: none;
+    background-color: rgb(135, 207, 255);
+    border-radius:5px;
+    cursor: pointer;
+}

@@ -1,0 +1,13 @@
+.head{
+    background-color: rgba(227, 99, 25, 0.847);
+    color:rgb(82, 3, 3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.head h1{
+    font-weight:500;
+    letter-spacing: 5px;
+    text-align: center;
+}
